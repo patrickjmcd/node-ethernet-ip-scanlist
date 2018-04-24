@@ -1,5 +1,4 @@
 <div align="center">
-    <p><img src="https://use.fontawesome.com/releases/v5.0.10/svgs/regular/list-alt.svg" style="width:200px;height:200px;"/></p>
   <p><a href="https://www.npmjs.com/package/ethernet-ip-scanlist"><img src="https://img.shields.io/npm/v/ethernet-ip-scanlist.svg?style=flat-square" alt="npm" /></a>
   <a href="https://github.com/patrickjmcd/node-ethernet-ip-scanlist/blob/master/LICENSE"><img src="https://img.shields.io/github/license/patrickjmcd/node-ethernet-ip-scanlist.svg?style=flat-square" alt="license" /></a>
   <img src="https://img.shields.io/travis/patrickjmcd/node-ethernet-ip-scanlist.svg?style=flat-square" alt="Travis" />
