@@ -1,3 +1,13 @@
+<div align="center">
+  <p><a href="https://www.npmjs.com/package/ethernet-ip-scanlist"><img src="https://img.shields.io/npm/v/ethernet-ip-scanlist.svg?style=flat-square" alt="npm" /></a>
+
+  <a href="https://github.com/patrickjmcd/node-ethernet-ip-scanlist/blob/master/LICENSE"><img src="https://img.shields.io/github/license/patrickjmcd/node-ethernet-ip-scanlist.svg?style=flat-square" alt="license" /></a>
+
+
+  <img src="https://img.shields.io/travis/patrickjmcd/node-ethernet-ip-scanlist.svg?style=flat-square" alt="Travis" />
+  <a href="https://github.com/patrickjmcd/node-ethernet-ip-scanlist"><img src="https://img.shields.io/github/stars/patrickjmcd/node-ethernet-ip-scanlist.svg?&amp;style=social&amp;logo=github&amp;label=Stars" alt="GitHub stars" /></a></p>
+</div>
+
 # Node Ethernet/IP Scan List
 
 A small plugin to help with scanning a list of tags.
