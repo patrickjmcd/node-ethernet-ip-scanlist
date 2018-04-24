@@ -5,12 +5,14 @@ const { EventEmitter } = require("events");
 
 
 class ScanList extends EventEmitter {
-    constructor(ipAddress, slot=0){
+    constructor(ipAddress, slot=0, scanRate=200){
         super();
         this.ipAddress = ipAddress;
         this.slot = slot;
         this.tags = {};
         this.PLC = new Controller();
+        this.PLC.scan_rate(scanRate);
+
     }
     /**
      * @param  {string} tagName

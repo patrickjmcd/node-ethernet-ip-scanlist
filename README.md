@@ -52,6 +52,7 @@ The ScanList class is constructed with the following parameters:
 
 - ipAddress: the IP address of the PLC (it is also possible to pass a FQDN to this parameter)
 - slot (optional, default = 0)
+- scanRate (optional, default = 200ms): the rate at which the PLC is scanned
 
 #### ```add(tagName, vanityName, storePeriod, storeChangeDelta)```
 
