@@ -11,7 +11,7 @@ class ScanList extends EventEmitter {
         this.slot = slot;
         this.tags = {};
         this.PLC = new Controller();
-        this.PLC.scan_rate(scanRate);
+        this.PLC.scan_rate = scanRate;
 
     }
     /**
