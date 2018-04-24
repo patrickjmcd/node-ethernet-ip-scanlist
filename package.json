@@ -1,0 +1,22 @@
+{
+  "name": "node-ethernet-ip-scanlist",
+  "version": "1.0.0",
+  "description": "Scan List for node-ethernet-ip",
+  "main": "index.js",
+  "repository": "https://github.com/patrickjmcd/node-ethernet-ip-scanlist",
+  "author": "Patrick McDonagh",
+  "license": "MIT",
+  "dependencies": {
+    "ethernet-ip": "^1.1.5",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test:watch": "npm run test -- --watch"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "tryme.js"]
+  }
+
+}
