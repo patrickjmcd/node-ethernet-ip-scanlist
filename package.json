@@ -16,7 +16,9 @@
     "test:watch": "npm run test -- --watch"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "tryme.js"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "tryme.js"
+    ]
   }
-
 }
