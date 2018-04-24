@@ -1,6 +1,6 @@
 {
   "name": "ethernet-ip-scanlist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scan List for ethernet-ip",
   "main": "./src/index.js",
   "repository": "https://github.com/patrickjmcd/node-ethernet-ip-scanlist",
