@@ -10,8 +10,8 @@ class ScanList extends EventEmitter {
         this.ipAddress = ipAddress;
         this.slot = slot;
         this.tags = {};
-        this.PLC = new Controller();
-        this.PLC.scan_rate = scanRate;
+        this.PLC = null;
+        this.scanRate = scanRate;
 
     }
     /**
@@ -45,6 +45,8 @@ class ScanList extends EventEmitter {
 
     
     start(){
+        this.PLC = new Controller();
+        this.PLC.scan_rate = this.scanRate;
         _.forEach(this.tags, (t) => {
             this.PLC.subscribe(t.enipTag);
         });
@@ -77,6 +79,10 @@ class ScanList extends EventEmitter {
                     this.emitNewValue(tag.name);
             });
         });
+    }
+
+    stop(){
+        this.PLC = null;
     }
 }
 

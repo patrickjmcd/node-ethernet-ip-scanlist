@@ -50,4 +50,9 @@ describe("ScanList", () => {
         scanList.emitUpdated("test");
         expect(newValueFn).toHaveBeenCalled();
     });
+
+    it("should null the PLC property out on stop function", () => {
+        scanList.stop();
+        expect(scanList.PLC).toBeNull();
+    });
 });
