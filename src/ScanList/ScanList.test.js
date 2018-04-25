@@ -40,4 +40,14 @@ describe("ScanList", () => {
         scanList.emitNewValue("test");
         expect(newValueFn).toHaveBeenCalled();
     });
+
+    it("should emit an Updated event", () => {
+        scanList.add("test", "Test", 1, 50.0, 600);
+        const newValueFn = jest.fn();
+        scanList.on("Updated", (tag) => {
+            newValueFn(tag);
+        });
+        scanList.emitUpdated("test");
+        expect(newValueFn).toHaveBeenCalled();
+    });
 });

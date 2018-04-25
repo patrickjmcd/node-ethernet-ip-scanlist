@@ -38,6 +38,11 @@ class ScanList extends EventEmitter {
         this.emit("newValue", thisTag);
     }
 
+    emitUpdated(tagName){
+        const thisTag = this.tags[tagName];
+        this.emit("Updated", thisTag);
+    }
+
     
     start(){
         _.forEach(this.tags, (t) => {
@@ -53,18 +58,21 @@ class ScanList extends EventEmitter {
         this.PLC.forEach( (tag) => {
             tag.on("Initialized", (tag) => {
                 const { storeValue } = this.tags[tag.name].gotValue(tag.value);
+                this.emitUpdated(tag.name);
                 if (storeValue)
                     this.emitNewValue(tag.name);
             });
         
             tag.on("Changed", (tag) => {
                 const { storeValue } = this.tags[tag.name].gotValue(tag.value);
+                this.emitUpdated(tag.name);
                 if (storeValue)
                     this.emitNewValue(tag.name);
             });
 
             tag.on("KeepAlive", (tag) => {
                 const { storeValue } = this.tags[tag.name].gotValue(tag.value);
+                this.emitUpdated(tag.name);
                 if (storeValue)
                     this.emitNewValue(tag.name);
             });

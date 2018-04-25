@@ -54,11 +54,34 @@ The ScanList class is constructed with the following parameters:
 
 #### ```add(tagName, vanityName, storePeriod, storeChangeDelta)```
 
-Creates a ScanTag with the given parameters.
+Creates a ```ScanTag``` with the given parameters.
 
 #### ```remove(tagName)```
 
-Removes a ScanTag from the ScanList with the given tag name.
+Removes a ```ScanTag``` from the ```ScanList``` with the given tag name.
+
+## Events
+
+Since the ```ScanList``` class extends ```EventEmitter```, it has the ability to emit events, two of which have been defined:
+
+### 1. ```Updated```
+
+The ```Updated``` event is emitted by the ```ScanList``` class when a tag's value has changed or the tag has been updated by the ```keepAlive``` parameter of the tag. This could be a minor change or no change at all. This event is useful for displaying values on an HMI screen or updating an in-memory value.
+
+The event is emitted with a payload of the updated ```ScanTag```.
+
+### 2. ```newValue```
+
+The ```newValue``` event is emitted by the ```ScanList``` class when any of the following are true:
+
+- The tag's value has changed by more than the ```storeChangeDelta```
+- The amount of time specified in the ```storePeriod``` has elapsed
+- The ```force``` parameter was ```true``` when calling ```gotValue```
+- There was no previous stored value or timestamp for the tag.
+
+This event is useful for pushing values to a remote monitoring system or storing to a database.
+
+The event is emitted with a payload of the updated ```ScanTag```.
 
 ## Usage
 
