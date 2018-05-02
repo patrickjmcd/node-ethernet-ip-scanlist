@@ -7,7 +7,7 @@
   "author": "Patrick McDonagh",
   "license": "MIT",
   "dependencies": {
-    "ethernet-ip": "^1.1.5",
+    "ethernet-ip": "https://github.com/patrickjmcd/node-ethernet-ip",
     "lodash": "^4.17.5",
     "moment": "^2.22.1"
   },
